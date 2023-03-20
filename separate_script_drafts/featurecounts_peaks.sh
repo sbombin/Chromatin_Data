@@ -18,6 +18,7 @@ source activate /home/sbombin/miniconda3/envs/peaks
 
 ## bed files should be converted to SAF format to be used with featureCounts
 ## peaks bed files can be merged with HOMMER or bedtools merge before 
+## to make peaks/reads count table, it's recommended to use unfiltered bam files with duplicates (if duplicate level < 50%) 
 
 for file in $(ls *.bed | rev | cut -c 5- | rev | uniq)
 do
